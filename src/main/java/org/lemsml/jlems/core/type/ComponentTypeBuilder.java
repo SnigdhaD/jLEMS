@@ -5,7 +5,7 @@ import org.lemsml.jlems.core.sim.ContentError;
 import org.lemsml.jlems.core.type.dynamics.DynamicsBuilder;
 import org.lemsml.jlems.core.type.dynamics.OnCondition;
 import org.lemsml.jlems.core.type.dynamics.OnEvent;
-
+import org.lemsml.jlems.core.type.dynamics.Regime;
 
 public class ComponentTypeBuilder {
 
@@ -132,6 +132,11 @@ public class ComponentTypeBuilder {
 	public void addOnCondition(OnCondition oc) {
 		checkDynamics();
 		dynB.addOnCondition(oc);	
+	}
+	
+	public void addRegime(Regime reg) {
+		checkDynamics();
+		dynB.addRegime(reg);
 	}
 
 }
