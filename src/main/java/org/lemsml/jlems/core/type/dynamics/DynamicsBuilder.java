@@ -82,5 +82,7 @@ public class DynamicsBuilder {
 		
 	}
 	
-	
+	public void addRegime(Regime reg) {
+		target.addRegime(reg);
+	}
 }
