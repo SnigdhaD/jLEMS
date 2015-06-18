@@ -31,6 +31,7 @@ import org.lemsml.jlems.core.type.dynamics.OnStart;
 import org.lemsml.jlems.core.type.dynamics.StateAssignment;
 import org.lemsml.jlems.core.type.dynamics.StateVariable;
 import org.lemsml.jlems.core.type.dynamics.TimeDerivative;
+import org.lemsml.jlems.core.type.dynamics.Regime;
 import org.lemsml.jlems.core.util.StringUtil;
 
 public class ComponentFlattener {
@@ -266,6 +267,12 @@ public class ComponentFlattener {
 				typeB.addOnStart(vnm, val);
 			}
 		}
+		
+		for (Regime reg : dyn.getRegimes()) {
+             		typeB.addRegime(reg);
+        	}  
+
+        	typeB.removeStateRequirements();
 
 	}
 	
